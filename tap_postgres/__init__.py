@@ -287,8 +287,6 @@ def do_sync(conn_config, catalog, default_replication_method, state, state_file=
     else:
         end_lsn = None
 
-    refresh_streams_schema(conn_config, streams)
-
     sync_method_lookup, traditional_streams, logical_streams = \
         sync_method_for_streams(streams, state, default_replication_method)
 
